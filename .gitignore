@@ -1,0 +1,20 @@
+# Local Netlify folder
+.netlify
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Backend build output (Render builds from source)
+backend/dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Prisma local DB
+backend/prisma/dev.db
+backend/prisma/dev.db-journal
