@@ -34,24 +34,24 @@ export default function Navbar() {
       style={{ top: "calc(40px + 22px)" }}
     >
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-20">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 flex-nowrap whitespace-nowrap">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group shrink-0">
-            <div className="flex items-center justify-center">
+          <Link href="/" className="flex items-center gap-2 group shrink-0 min-w-0">
+            <div className="flex items-center justify-center shrink-0">
               <img src="/logo-new.jpeg" alt="Logo" className="h-6 md:h-12 w-auto object-contain rounded-md" />
             </div>
-            <div className="flex flex-col">
-               <span className="font-heading text-lg md:text-3xl tracking-[0.1em] text-brand-saffron font-bold uppercase">
+            <div className="flex flex-col min-w-0">
+               <span className="font-heading text-lg md:text-3xl tracking-[0.1em] text-brand-saffron font-bold uppercase truncate">
                 BHRAMASTRA
               </span>
-              <span className="text-[7px] md:text-[11px] font-body tracking-[0.2em] font-light text-brand-grey uppercase -mt-1 text-center w-full block">
+              <span className="text-[7px] md:text-[11px] font-body tracking-[0.2em] font-light text-brand-grey uppercase -mt-1 text-center w-full block truncate">
                 Financial Services
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-10">
+          <nav className="hidden lg:flex items-center gap-10 shrink-0">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
@@ -72,11 +72,11 @@ export default function Navbar() {
               Book Consultation
             </Link>
             <button
-              className="lg:hidden text-white p-2 flex items-center justify-center"
+              className="lg:hidden text-white p-2 flex items-center justify-center transition-colors hover:text-brand-saffron"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
-              {isOpen ? <X size={24} /> : <span className="text-3xl leading-none select-none font-bold text-white">⋮</span>}
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
