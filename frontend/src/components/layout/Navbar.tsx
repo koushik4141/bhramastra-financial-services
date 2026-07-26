@@ -64,19 +64,19 @@ export default function Navbar() {
           </nav>
 
           {/* CTA + Mobile Toggle */}
-          <div className="flex items-center gap-2 md:gap-4">
+          <div className="flex items-center gap-1.5 md:gap-4">
             <Link
               href="/contact"
-              className="inline-flex btn-primary text-[9px] md:text-[11px] px-3 py-1.5 md:px-6 md:py-3"
+              className="inline-flex btn-primary text-[7px] md:text-[11px] px-2 py-1 md:px-6 md:py-3 whitespace-nowrap"
             >
               Book Consultation
             </Link>
             <button
-              className="lg:hidden text-white p-2"
+              className="lg:hidden text-white p-1"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
-              {isOpen ? <X size={22} /> : <span className="text-2xl leading-none select-none">⋮</span>}
+              {isOpen ? <X size={20} /> : <span className="text-xl leading-none select-none font-bold text-white">⋮</span>}
             </button>
           </div>
         </div>

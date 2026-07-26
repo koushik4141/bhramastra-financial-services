@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MarketTicker from "@/components/layout/MarketTicker";
@@ -20,7 +20,7 @@ export default function PublicLayout({
       <Footer />
       {/* Floating WhatsApp Quick-Chat Widget */}
       <a
-        href="https://wa.me/919999999999?text=Hello%20BHRAMASTRA,%20I%20am%20interested%20in%20your%20services."
+        href="https://wa.me/919133983607?text=Hello%20BHRAMASTRA,%20I%20am%20interested%20in%20your%20services."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(37,211,102,0.3)]"

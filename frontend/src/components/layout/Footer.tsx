@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { Linkedin, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -65,11 +65,11 @@ export default function Footer() {
             <div className="flex flex-col space-y-4">
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-brand-saffron shrink-0" />
-                <span className="text-brand-grey text-sm">contact@bhramastra.in</span>
+                <span className="text-brand-grey text-sm">bhramastraone@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-brand-saffron shrink-0" />
-                <span className="text-brand-grey text-sm">+91 99999 99999</span>
+                <span className="text-brand-grey text-sm">9133983607</span>
               </div>
             </div>
             
