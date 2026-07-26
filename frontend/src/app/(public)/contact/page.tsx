@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Mail, Phone, MapPin, Clock, Linkedin, ArrowRight } from "lucide-react";
 import { PremiumButton } from "@/components/ui/PremiumButton";
 
@@ -35,7 +35,7 @@ export default function ContactPage() {
                 <Mail className="text-brand-saffron" /> Email Address
               </h3>
               <p className="text-brand-grey">
-                contact@bhramastra.in
+                bhramastraone@gmail.com
               </p>
             </div>
 
@@ -44,7 +44,7 @@ export default function ContactPage() {
                 <Phone className="text-brand-saffron" /> Phone Number
               </h3>
               <p className="text-brand-grey">
-                +91 99999 99999
+                9133983607
               </p>
             </div>
 

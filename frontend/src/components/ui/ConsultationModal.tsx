@@ -160,7 +160,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="relative p-8 pb-6 border-b border-white/5">
+            <div className="relative p-5 md:p-8 pb-4 md:pb-6 border-b border-white/5">
               <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent rounded-t-3xl pointer-events-none" />
               <div className="relative flex items-start justify-between">
                 <div>
@@ -185,7 +185,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
             </div>
 
             {/* Form Body */}
-            <form onSubmit={handleSubmit} noValidate className="p-8 space-y-5">
+            <form onSubmit={handleSubmit} noValidate className="p-5 md:p-8 space-y-4 md:space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-[11px] font-body font-medium text-brand-grey uppercase tracking-wider mb-1.5" htmlFor="c-name">

@@ -197,8 +197,8 @@ export default function MarketTicker() {
 
       {/* Row 2: Risk Disclaimer */}
       <div className="bg-brand-primary backdrop-blur-sm overflow-hidden flex whitespace-nowrap">
-        <div className="py-[3px] animate-ticker inline-flex min-w-full">
-          {[...Array(6)].map((_, i) => (
+        <div className="py-[3px] ticker-fast inline-flex min-w-full">
+          {[...Array(8)].map((_, i) => (
             <span key={i} className="text-[10px] font-body font-medium text-black tracking-wide px-8">
               ⚠ Investments in securities market are subject to market risks. Read all related documents carefully before investing.
             </span>

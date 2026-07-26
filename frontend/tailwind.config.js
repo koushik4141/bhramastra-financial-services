@@ -52,7 +52,7 @@ module.exports = {
       animation: {
         "fade-in-up": "fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "fade-in": "fadeIn 0.6s ease-out forwards",
-        ticker: "ticker 60s linear infinite",
+        ticker: "ticker 48s linear infinite",
         "shimmer": "shimmer 2.5s ease-in-out infinite",
       },
       keyframes: {

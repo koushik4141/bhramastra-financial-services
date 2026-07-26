@@ -1,4 +1,4 @@
-import { Inter, Outfit } from "next/font/google";
+import { Inter, Cinzel } from "next/font/google";
 import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -11,7 +11,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const outfit = Outfit({
+const cinzel = Cinzel({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${outfit.variable} h-full antialiased`}
+      className={`${inter.variable} ${cinzel.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-white font-body">
         <AppLoader />
