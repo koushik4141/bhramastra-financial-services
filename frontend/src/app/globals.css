@@ -1,0 +1,355 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   BRAHMASTRA DESIGN SYSTEM - GLOBALS
+   Premium Institutional Financial Platform
+   ======================================== */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-white min-h-screen font-body antialiased overflow-x-hidden;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-wide;
+  }
+
+  ::selection {
+    background: rgba(212, 175, 55, 0.3);
+    color: #fff;
+  }
+}
+
+/* ========================================
+   GLASSMORPHISM
+   ======================================== */
+.glass-panel {
+  background: rgba(13, 17, 23, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-panel-gold {
+  background: rgba(13, 17, 23, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.glass-header {
+  background: rgba(5, 5, 5, 0.75);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.glass-card {
+  background: rgba(13, 17, 23, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(13, 17, 23, 0.7);
+  border-color: rgba(212, 175, 55, 0.2);
+  box-shadow: 0 12px 50px -12px rgba(212, 175, 55, 0.12);
+  transform: translateY(-6px);
+}
+
+.glass-card-green:hover {
+  border-color: rgba(0, 230, 118, 0.25);
+  box-shadow: 0 12px 50px -12px rgba(0, 230, 118, 0.12);
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-8 py-4 font-body font-semibold text-sm tracking-wider uppercase;
+  background: linear-gradient(135deg, #D4AF37 0%, #AA8022 100%);
+  color: #050505;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 30px rgba(212, 175, 55, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 px-8 py-4 font-body font-semibold text-sm tracking-wider uppercase;
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-secondary:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  color: #D4AF37;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-green {
+  @apply inline-flex items-center justify-center gap-2 px-8 py-4 font-body font-semibold text-sm tracking-wider uppercase;
+  background: linear-gradient(135deg, #00E676 0%, #00C853 100%);
+  color: #050505;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-green:hover {
+  box-shadow: 0 6px 30px rgba(0, 230, 118, 0.35);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   FORM INPUTS
+   ======================================== */
+.glass-input {
+  background: rgba(13, 17, 23, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: white;
+  border-radius: 12px;
+  padding: 14px 18px;
+  transition: all 0.3s ease;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.glass-input:focus {
+  border-color: rgba(212, 175, 55, 0.6);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ========================================
+   GRADIENT BORDERS
+   ======================================== */
+.gradient-border-gold {
+  position: relative;
+  background: #0D1117;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+  border-radius: 18px;
+}
+
+.gradient-border-gold::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(212,175,55,0.4) 0%, rgba(170,128,34,0.1) 100%);
+}
+
+/* ========================================
+   SCROLLBAR
+   ======================================== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a2e;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* ========================================
+   TEXT EFFECTS
+   ======================================== */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #E8CC6A 50%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-green-gradient {
+  background: linear-gradient(135deg, #00E676 0%, #69F0AE 50%, #00E676 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes goldGlow {
+  0%, 100% { text-shadow: 0 0 10px rgba(212,175,55,0.15), 0 0 30px rgba(212,175,55,0.1); }
+  50% { text-shadow: 0 0 20px rgba(212,175,55,0.4), 0 0 50px rgba(212,175,55,0.2); }
+}
+
+.gold-glow {
+  animation: goldGlow 4s infinite ease-in-out;
+}
+
+/* ========================================
+   SECTION STYLES
+   ======================================== */
+.section-padding {
+  @apply py-24 md:py-32 px-6 md:px-12 lg:px-20;
+}
+
+.section-title {
+  @apply font-heading text-3xl md:text-4xl lg:text-5xl tracking-wider text-center mb-4;
+}
+
+.section-subtitle {
+  @apply font-body text-brand-grey text-center max-w-2xl mx-auto text-base md:text-lg leading-relaxed;
+}
+
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  margin: 0 auto 1.5rem;
+}
+
+/* ========================================
+   TICKER
+   ======================================== */
+.ticker-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-content {
+  display: inline-flex;
+  animation: ticker 60s linear infinite;
+}
+
+.ticker-content:hover {
+  animation-play-state: paused;
+}
+
+/* ========================================
+   VOLUMETRIC LIGHT
+   ======================================== */
+.vol-light {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+/* ========================================
+   HERO PARTICLES
+   ======================================== */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.particle-gold {
+  background: radial-gradient(circle, rgba(212,175,55,0.8) 0%, transparent 70%);
+}
+
+.particle-blue {
+  background: radial-gradient(circle, rgba(45,140,255,0.6) 0%, transparent 70%);
+}
+
+/* ========================================
+   PRICING CARD HIGHLIGHT
+   ======================================== */
+.pricing-highlight {
+  position: relative;
+  border: 1px solid rgba(0, 230, 118, 0.3);
+  box-shadow: 0 0 60px rgba(0, 230, 118, 0.08);
+}
+
+.pricing-highlight::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px; right: -1px; bottom: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(0,230,118,0.2), transparent 50%, rgba(0,230,118,0.1));
+  z-index: -1;
+}
+
+/* ========================================
+   NAV HOVER UNDERLINE
+   ======================================== */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #D4AF37, #E8CC6A);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #D4AF37;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   RESPONSIVE UTILITIES
+   ======================================== */
+@media (max-width: 768px) {
+  .section-padding {
+    @apply py-16 px-4;
+  }
+}
+
+/* Remove outline from framer-motion elements */
+[data-framer-component-type] {
+  outline: none;
+}
+
+/* Smooth page transitions */
+main {
+  animation: fadeInUp 0.5s ease-out;
+}
