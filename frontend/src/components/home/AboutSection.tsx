@@ -67,11 +67,11 @@ export default function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-brand-primary text-xs font-heading tracking-[0.2em] font-semibold uppercase">
+          <span className="text-brand-gold text-[11px] font-heading tracking-[0.3em] uppercase">
             Who We Are
           </span>
           <h2 className="section-title mt-3">
-            ABOUT <span className="text-brand-primary">BHRAMASTRA</span>
+            ABOUT <span className="text-gold-gradient">BHRAMASTRA</span>
           </h2>
           <div className="section-divider mt-4" />
         </motion.div>
@@ -88,7 +88,7 @@ export default function AboutSection() {
           >
             <p className="text-white text-lg leading-relaxed">
               BHRAMASTRA is a proprietary trading methodology developed through{" "}
-              <span className="text-brand-primary font-semibold">
+              <span className="text-brand-gold font-semibold">
                 five years of continuous research
               </span>{" "}
               and live market testing across Indian equity, derivatives, and
@@ -107,10 +107,10 @@ export default function AboutSection() {
             </p>
 
             {/* Decorative stat box */}
-            <div className="glass-panel border-brand-primary/20 rounded-card p-6 mt-8">
+            <div className="glass-panel-gold rounded-card p-6 mt-8">
               <div className="flex items-center gap-8">
                 <div className="text-center">
-                  <div className="text-3xl font-heading font-bold text-brand-primary">
+                  <div className="text-3xl font-heading font-bold text-gold-gradient">
                     5+
                   </div>
                   <div className="text-[10px] text-brand-grey tracking-widest uppercase mt-1">
@@ -119,7 +119,7 @@ export default function AboutSection() {
                 </div>
                 <div className="w-[1px] h-12 bg-white/10" />
                 <div className="text-center">
-                  <div className="text-3xl font-heading font-bold text-brand-secondary">
+                  <div className="text-3xl font-heading font-bold text-green-gradient">
                     500+
                   </div>
                   <div className="text-[10px] text-brand-grey tracking-widest uppercase mt-1">
@@ -128,7 +128,7 @@ export default function AboutSection() {
                 </div>
                 <div className="w-[1px] h-12 bg-white/10" />
                 <div className="text-center">
-                  <div className="text-3xl font-heading font-bold text-brand-primary">
+                  <div className="text-3xl font-heading font-bold text-gold-gradient">
                     1500+
                   </div>
                   <div className="text-[10px] text-brand-grey tracking-widest uppercase mt-1">
@@ -152,8 +152,8 @@ export default function AboutSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <div className="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center mb-4 group-hover:bg-brand-primary/20 transition-colors">
-                    <Icon size={20} className="text-brand-primary" />
+                  <div className="w-10 h-10 rounded-xl bg-brand-gold/10 flex items-center justify-center mb-4 group-hover:bg-brand-gold/20 transition-colors">
+                    <Icon size={20} className="text-brand-gold" />
                   </div>
                   <h4 className="font-heading text-sm tracking-wider text-white mb-2">
                     {pillar.title}
@@ -178,7 +178,7 @@ export default function AboutSection() {
           >
             <Link 
               href="/about" 
-              className="btn-secondary text-sm"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 text-white font-body font-semibold text-sm uppercase tracking-wider rounded-button hover:bg-white/10 transition-all border border-white/10"
             >
               Learn More <ArrowRight size={16} />
             </Link>

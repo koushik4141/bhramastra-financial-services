@@ -25,10 +25,10 @@ export const PremiumButton: React.FC<PremiumButtonProps> = ({
 
   const variants = {
     primary:
-      "bg-brand-primary text-background hover:bg-brand-primary-dark shadow-[0_0_15px_rgba(255,153,51,0.4)] hover:shadow-[0_0_25px_rgba(255,153,51,0.6)]",
+      "bg-brand-gold text-background hover:bg-[#AA8022] shadow-[0_0_15px_rgba(212,175,55,0.4)] hover:shadow-[0_0_25px_rgba(212,175,55,0.6)]",
     secondary:
-      "bg-background text-brand-primary border border-brand-primary hover:bg-brand-primary hover:text-background",
-    outline: "border border-white/20 text-white hover:border-brand-primary hover:text-brand-primary bg-white/5 backdrop-blur-md",
+      "bg-background text-brand-gold border border-brand-gold hover:bg-brand-gold hover:text-background",
+    outline: "border border-white/20 text-white hover:border-brand-gold hover:text-brand-gold bg-white/5 backdrop-blur-md",
   };
 
   return (

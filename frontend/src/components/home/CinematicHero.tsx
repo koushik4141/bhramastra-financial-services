@@ -26,7 +26,7 @@ export default function CinematicHero() {
   return (
     <section
       id="home"
-      className="relative min-h-[85vh] lg:min-h-screen w-full overflow-hidden flex items-center bg-[#050505]"
+      className="relative min-h-screen w-full overflow-hidden flex items-center bg-[#050505]"
     >
       {/* Ambient Background Effects - Soft Cinematic Lighting */}
       <div className="absolute inset-0 pointer-events-none">
@@ -44,8 +44,8 @@ export default function CinematicHero() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 md:px-12 lg:px-20 pt-24 pb-12 md:pt-40 md:pb-20">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0 h-full">
+      <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 md:px-12 lg:px-20 pt-40 pb-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-0 h-full">
           {/* LEFT SIDE - 60% */}
           <motion.div
             className="w-full lg:w-[60%] flex flex-col justify-center relative z-20"
@@ -56,10 +56,10 @@ export default function CinematicHero() {
             {/* Small Label */}
             <motion.div
               variants={itemVariants}
-              className="flex items-center gap-4 mb-4 md:mb-8"
+              className="flex items-center gap-4 mb-8"
             >
-              <span className="w-12 h-[1px] bg-brand-primary opacity-60" />
-              <span className="text-brand-primary text-xs font-heading tracking-[0.2em] font-semibold uppercase">
+              <span className="w-12 h-[1px] bg-brand-saffron opacity-60" />
+              <span className="text-brand-saffron text-[11px] font-heading tracking-[0.3em] uppercase">
                 Premium Institutional Research
               </span>
             </motion.div>
@@ -67,10 +67,10 @@ export default function CinematicHero() {
             {/* Main Heading */}
             <motion.h1
               variants={itemVariants}
-              className="font-heading font-bold leading-[1.1] mb-4 md:mb-6 tracking-tight uppercase"
+              className="font-heading font-bold leading-[0.95] mb-6 tracking-[-1px] uppercase"
             >
-              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[7.5rem] whitespace-nowrap">
-                <span className="text-brand-primary">BHRAM</span>
+              <span className="block text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] 2xl:text-[7rem] whitespace-nowrap">
+                <span className="text-brand-saffron">BHRAM</span>
                 <span className="text-white">ASTRA</span>
               </span>
             </motion.h1>
@@ -78,18 +78,18 @@ export default function CinematicHero() {
             {/* Subheading */}
             <motion.h2
               variants={itemVariants}
-              className="font-heading font-semibold text-lg sm:text-2xl md:text-3xl lg:text-4xl tracking-wide uppercase mb-4 md:mb-8 leading-tight"
+              className="font-heading font-bold text-2xl md:text-3xl lg:text-4xl tracking-wide uppercase mb-8"
             >
               <span className="text-white">The Ultimate Weapon</span>
               <br />
               <span className="text-white">To Build </span>
-              <span className="text-brand-secondary">Wealth</span>
+              <span className="text-brand-green">Wealth</span>
             </motion.h2>
 
             {/* Paragraph */}
             <motion.p
               variants={itemVariants}
-              className="text-brand-grey text-sm md:text-base leading-relaxed max-w-lg mb-6 md:mb-10"
+              className="text-brand-grey text-sm md:text-base leading-relaxed max-w-lg mb-10"
             >
               Institutional-grade market research and advanced data-driven
               investment strategies engineered to help traders and investors make
@@ -103,14 +103,14 @@ export default function CinematicHero() {
             >
               <a 
                 href="#consultation" 
-                className="btn-primary py-4 text-sm"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-saffron text-[#050505] font-body font-semibold text-sm uppercase tracking-wider rounded-button hover:bg-brand-saffron/90 transition-all shadow-[0_0_20px_rgba(255,153,51,0.3)] hover:shadow-[0_0_30px_rgba(255,153,51,0.5)]"
               >
                 Book Consultation
                 <ArrowRight size={16} />
               </a>
               <a 
                 href="#services" 
-                className="btn-secondary py-4 text-sm"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 text-white font-body font-semibold text-sm uppercase tracking-wider rounded-button hover:bg-white/10 transition-all border border-white/10"
               >
                 Explore Research
                 <ArrowRight size={16} />
@@ -118,9 +118,9 @@ export default function CinematicHero() {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT SIDE - 40% - Static Premium Emblem - Hidden on mobile */}
+          {/* RIGHT SIDE - 40% - Static Premium Emblem */}
           <motion.div
-            className="hidden lg:flex w-full lg:w-[40%] justify-center items-center relative z-10"
+            className="w-full lg:w-[40%] flex justify-center items-center relative z-10"
             initial={{ opacity: 0, filter: "blur(10px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
@@ -160,14 +160,14 @@ export default function CinematicHero() {
           animate={{ opacity: 0.5 }}
           transition={{ delay: 1.5 }}
         >
-          <span className="text-xs font-body tracking-[0.2em] font-medium text-brand-grey uppercase">
+          <span className="text-[10px] font-body tracking-[0.2em] text-brand-grey uppercase">
             Scroll to explore
           </span>
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           >
-            <ChevronDown size={16} className="text-brand-primary" />
+            <ChevronDown size={16} className="text-brand-saffron" />
           </motion.div>
         </motion.div>
       </div>

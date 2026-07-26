@@ -20,7 +20,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-semibold tracking-tight;
+    @apply font-heading tracking-wide;
   }
 
   ::selection {
@@ -33,121 +33,127 @@
    GLASSMORPHISM
    ======================================== */
 .glass-panel {
-  background: rgba(26, 26, 26, 0.4);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(13, 17, 23, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .glass-panel-gold {
-  background: rgba(26, 26, 26, 0.4);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(13, 17, 23, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
 }
 
 .glass-header {
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(32px) saturate(180%);
-  -webkit-backdrop-filter: blur(32px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(5, 5, 5, 0.75);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .glass-card {
-  background: rgba(17, 17, 17, 0.6);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background: rgba(13, 17, 23, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card:hover {
-  background: rgba(26, 26, 26, 0.8);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.6);
-  transform: translateY(-4px);
+  background: rgba(13, 17, 23, 0.7);
+  border-color: rgba(212, 175, 55, 0.2);
+  box-shadow: 0 12px 50px -12px rgba(212, 175, 55, 0.12);
+  transform: translateY(-6px);
 }
 
 .glass-card-green:hover {
-  border-color: rgba(0, 230, 118, 0.3);
-  box-shadow: 0 8px 32px -4px rgba(0, 230, 118, 0.15);
+  border-color: rgba(0, 230, 118, 0.25);
+  box-shadow: 0 12px 50px -12px rgba(0, 230, 118, 0.12);
 }
 
 /* ========================================
    BUTTONS
    ======================================== */
 .btn-primary {
-  @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-body font-medium text-sm tracking-wide;
-  background: #D4AF37;
-  color: #000000;
-  border-radius: 8px;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  @apply inline-flex items-center justify-center gap-2 px-8 py-4 font-body font-semibold text-sm tracking-wider uppercase;
+  background: linear-gradient(135deg, #D4AF37 0%, #AA8022 100%);
+  color: #050505;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
 
-.btn-primary:hover {
-  background: #E8CC6A;
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
-  transform: translateY(-1px);
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
 }
 
-.btn-primary:active {
-  transform: translateY(1px);
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 30px rgba(212, 175, 55, 0.35);
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-body font-medium text-sm tracking-wide;
+  @apply inline-flex items-center justify-center gap-2 px-8 py-4 font-body font-semibold text-sm tracking-wider uppercase;
   background: transparent;
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-secondary:hover {
-  border-color: rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.05);
-  transform: translateY(-1px);
+  border-color: rgba(212, 175, 55, 0.5);
+  color: #D4AF37;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+  transform: translateY(-2px);
 }
 
 .btn-green {
-  @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-body font-medium text-sm tracking-wide;
-  background: #00E676;
-  color: #000000;
-  border-radius: 8px;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  @apply inline-flex items-center justify-center gap-2 px-8 py-4 font-body font-semibold text-sm tracking-wider uppercase;
+  background: linear-gradient(135deg, #00E676 0%, #00C853 100%);
+  color: #050505;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-green:hover {
-  background: #00C853;
-  box-shadow: 0 4px 20px rgba(0, 230, 118, 0.3);
-  transform: translateY(-1px);
+  box-shadow: 0 6px 30px rgba(0, 230, 118, 0.35);
+  transform: translateY(-2px);
 }
 
 /* ========================================
    FORM INPUTS
    ======================================== */
 .glass-input {
-  background: rgba(17, 17, 17, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(13, 17, 23, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   color: white;
-  border-radius: 8px;
-  padding: 12px 16px;
-  transition: all 0.2s ease;
+  border-radius: 12px;
+  padding: 14px 18px;
+  transition: all 0.3s ease;
   font-family: var(--font-inter), sans-serif;
-  width: 100%;
 }
 
 .glass-input:focus {
-  border-color: rgba(212, 175, 55, 0.8);
+  border-color: rgba(212, 175, 55, 0.6);
   outline: none;
-  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.15);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
 }
 
 .glass-input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* ========================================
@@ -250,16 +256,11 @@
 
 .ticker-content {
   display: inline-flex;
-  animation: ticker 48s linear infinite;
+  animation: ticker 60s linear infinite;
 }
 
 .ticker-content:hover {
   animation-play-state: paused;
-}
-
-.ticker-fast {
-  display: inline-flex;
-  animation: ticker 36s linear infinite;
 }
 
 /* ========================================

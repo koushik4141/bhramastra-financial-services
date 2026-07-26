@@ -97,16 +97,16 @@ export default function TrustMetrics() {
                 {/* Top accent line */}
                 <div
                   className={`h-[2px] w-12 mx-auto mb-6 rounded-full ${
-                    isGold ? "bg-brand-primary" : "bg-brand-secondary"
+                    isGold ? "bg-brand-gold" : "bg-brand-green"
                   }`}
                 />
 
                 {/* Icon */}
                 <div
-                  className={`w-14 h-14 rounded-xl mx-auto mb-5 flex items-center justify-center ${
+                  className={`w-14 h-14 rounded-2xl mx-auto mb-5 flex items-center justify-center ${
                     isGold
-                      ? "bg-brand-primary/10 text-brand-primary"
-                      : "bg-brand-secondary/10 text-brand-secondary"
+                      ? "bg-brand-gold/10 text-brand-gold"
+                      : "bg-brand-green/10 text-brand-green"
                   }`}
                 >
                   <Icon size={26} />

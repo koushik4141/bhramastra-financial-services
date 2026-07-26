@@ -1,10 +1,8 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
 import { Check, Star, ArrowRight } from "lucide-react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const plans = [
   {
@@ -55,9 +53,12 @@ const plans = [
       "Highest Priority Support",
     ],
     cta: "Go Elite",
-    ctaClass: "btn-primary",
+    ctaClass: "btn-green",
   },
 ];
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function ServicesSection() {
   const pathname = usePathname();
@@ -72,11 +73,11 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-brand-primary text-xs font-heading tracking-[0.2em] font-semibold uppercase">
+          <span className="text-brand-gold text-[11px] font-heading tracking-[0.3em] uppercase">
             Investment Plans
           </span>
           <h2 className="section-title mt-3">
-            OUR <span className="text-brand-primary">SERVICES</span>
+            OUR <span className="text-gold-gradient">SERVICES</span>
           </h2>
           <div className="section-divider mt-4" />
           <p className="section-subtitle mt-4">
@@ -102,7 +103,7 @@ export default function ServicesSection() {
             >
               {/* Recommended Badge */}
               {plan.badge && (
-                <div className="bg-brand-secondary text-background text-[10px] font-body font-bold tracking-[0.2em] uppercase text-center py-2">
+                <div className="bg-gradient-to-r from-brand-green to-brand-green-dark text-background text-[10px] font-body font-bold tracking-[0.2em] uppercase text-center py-2">
                   <Star size={12} className="inline mr-1 -mt-0.5" />
                   {plan.badge}
                 </div>
@@ -121,12 +122,12 @@ export default function ServicesSection() {
 
                 {/* Price */}
                 <div className="mb-8">
-                  <span className="text-brand-grey text-sm">₹</span>
+                  <span className="text-brand-grey text-sm">â‚¹</span>
                   <span
                     className={`text-4xl md:text-5xl font-heading font-bold ml-1 ${
                       plan.highlight
-                        ? "text-brand-secondary"
-                        : "text-brand-primary"
+                        ? "text-green-gradient"
+                        : "text-gold-gradient"
                     }`}
                   >
                     {plan.price}
@@ -147,8 +148,8 @@ export default function ServicesSection() {
                         size={16}
                         className={`shrink-0 mt-0.5 ${
                           plan.highlight
-                            ? "text-brand-secondary"
-                            : "text-brand-primary"
+                            ? "text-brand-green"
+                            : "text-brand-gold"
                         }`}
                       />
                       <span className="text-brand-grey-light">{feature}</span>
@@ -180,7 +181,7 @@ export default function ServicesSection() {
           >
             <Link 
               href="/services" 
-              className="btn-secondary text-sm"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 text-white font-body font-semibold text-sm uppercase tracking-wider rounded-button hover:bg-white/10 transition-all border border-white/10"
             >
               Explore Services <ArrowRight size={16} />
             </Link>
@@ -190,3 +191,4 @@ export default function ServicesSection() {
     </section>
   );
 }
+

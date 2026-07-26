@@ -12,7 +12,7 @@ const newsItems = [
     date: "July 15, 2024",
     excerpt:
       "A deep dive into the upcoming earnings season and sectors positioned for potential outperformance based on institutional flows.",
-    gradient: "from-brand-primary/20 to-brand-primary/5",
+    gradient: "from-brand-gold/20 to-brand-gold/5",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const newsItems = [
     date: "July 12, 2024",
     excerpt:
       "Understanding why protecting capital is mathematically more important than chasing returns — the asymmetry of loss recovery.",
-    gradient: "from-brand-secondary/20 to-brand-secondary/5",
+    gradient: "from-brand-green/20 to-brand-green/5",
   },
   {
     id: 3,
@@ -50,11 +50,11 @@ export default function NewsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-brand-primary text-xs font-heading tracking-[0.2em] font-semibold uppercase">
+          <span className="text-brand-gold text-[11px] font-heading tracking-[0.3em] uppercase">
             Market Insights
           </span>
           <h2 className="section-title mt-3">
-            LATEST <span className="text-brand-primary">NEWS</span>
+            LATEST <span className="text-gold-gradient">NEWS</span>
           </h2>
           <div className="section-divider mt-4" />
           <p className="section-subtitle mt-4">
@@ -80,7 +80,7 @@ export default function NewsSection() {
                   {item.category}
                 </span>
                 {/* Content */}
-                <h3 className="font-heading text-base tracking-wide text-white mb-3 group-hover:text-brand-primary transition-colors leading-snug">
+                <h3 className="font-heading text-base tracking-wide text-white mb-3 group-hover:text-brand-gold transition-colors leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-brand-grey text-xs leading-relaxed mb-4">
@@ -91,7 +91,7 @@ export default function NewsSection() {
                     <Calendar size={12} />
                     <span className="text-[11px]">{item.date}</span>
                   </div>
-                  <span className="text-brand-primary text-[11px] font-body font-semibold tracking-wider uppercase flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <span className="text-brand-gold text-[11px] font-body font-semibold tracking-wider uppercase flex items-center gap-1 group-hover:gap-2 transition-all">
                     Read More <ArrowRight size={12} />
                   </span>
                 </div>
@@ -111,7 +111,7 @@ export default function NewsSection() {
           >
             <Link
               href="/news"
-              className="btn-secondary text-sm"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 text-white font-body font-semibold text-sm uppercase tracking-wider rounded-button hover:bg-white/10 transition-all border border-white/10"
             >
               View All News <ArrowRight size={16} />
             </Link>

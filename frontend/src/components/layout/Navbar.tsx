@@ -21,53 +21,42 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
-    
-    // Prevent scrolling when mobile menu is open
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen]);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header
       className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "glass-header shadow-soft"
+          ? "glass-header shadow-lg"
           : "bg-transparent"
       }`}
       style={{ top: "calc(40px + 22px)" }}
     >
-      <div className="max-w-[1800px] mx-auto px-4 md:px-8 lg:px-12">
+      <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-20">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group relative z-50">
+          <Link href="/" className="flex items-center gap-3 group">
             <div className="flex items-center justify-center">
-              <img src="/logo-new.jpeg" alt="Logo" className="h-10 w-auto object-contain rounded-md" />
+              <img src="/logo-new.jpeg" alt="Logo" className="h-12 w-auto object-contain rounded-md" />
             </div>
             <div className="flex flex-col">
-               <span className="font-heading text-2xl md:text-3xl tracking-tight text-brand-primary font-bold uppercase leading-none">
+               <span className="font-heading text-3xl tracking-[0.1em] text-brand-saffron font-bold uppercase">
                 BHRAMASTRA
               </span>
-              <span className="text-[10px] md:text-[11px] font-body tracking-[0.2em] font-medium text-brand-grey uppercase mt-1 text-left w-full block">
+              <span className="text-[10px] md:text-[11px] font-body tracking-[0.2em] font-light text-brand-grey uppercase -mt-1 text-center w-full block">
                 Financial Services
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="nav-link text-xs font-body font-medium tracking-[0.1em] text-brand-grey-light uppercase transition-colors hover:text-brand-primary"
+                className="nav-link text-[11px] font-body font-medium tracking-[0.15em] text-brand-grey-light uppercase"
               >
                 {link.label}
               </Link>
@@ -75,70 +64,59 @@ export default function Navbar() {
           </nav>
 
           {/* CTA + Mobile Toggle */}
-          <div className="flex items-center gap-4 relative z-50">
+          <div className="flex items-center gap-4">
             <Link
               href="/contact"
-              className="hidden md:inline-flex btn-primary text-xs px-6 py-2.5"
+              className="hidden md:inline-flex btn-primary text-[11px] px-6 py-3"
             >
               Book Consultation
             </Link>
             <button
-              className="lg:hidden text-white p-2 hover:text-brand-primary transition-colors"
+              className="lg:hidden text-white p-2"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Full-Screen Mobile Menu */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: "-100%" }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: "-100%" }}
-            transition={{ type: "tween", duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-40 bg-background/95 backdrop-blur-3xl flex flex-col pt-32 pb-8 px-6 lg:hidden"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden glass-header border-t border-white/5"
           >
-            <nav className="flex flex-col gap-6 items-center flex-grow justify-center">
+            <nav className="flex flex-col py-6 px-6 gap-1">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 + (i * 0.05), duration: 0.4 }}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 }}
                 >
                   <Link
                     href={link.href}
-                    className="block text-2xl font-heading font-medium tracking-wide text-brand-white uppercase hover:text-brand-primary transition-colors"
+                    className="block py-3 px-4 text-[12px] font-body font-medium tracking-[0.15em] text-brand-grey-light uppercase hover:text-brand-gold hover:bg-white/5 rounded-lg transition-all"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.label}
                   </Link>
                 </motion.div>
               ))}
-            </nav>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.4 }}
-              className="mt-auto flex flex-col items-center gap-4"
-            >
               <Link
                 href="/contact"
-                className="btn-primary w-full text-center text-sm py-4"
+                className="btn-primary text-[11px] mt-4 text-center block"
                 onClick={() => setIsOpen(false)}
               >
                 Book Consultation
               </Link>
-              <p className="text-brand-grey text-xs tracking-widest uppercase">
-                Premium Institutional Research
-              </p>
-            </motion.div>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
