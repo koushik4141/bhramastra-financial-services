@@ -67,16 +67,16 @@ export default function Navbar() {
           <div className="flex items-center gap-2 md:gap-4 shrink-0">
             <Link
               href="/contact"
-              className="inline-flex btn-primary !text-[9px] md:!text-[11px] !px-3 !py-1.5 md:!px-6 md:!py-3 whitespace-nowrap"
+              className="hidden md:inline-flex btn-primary md:!text-[11px] md:!px-6 md:!py-3 whitespace-nowrap"
             >
               Book Consultation
             </Link>
             <button
-              className="lg:hidden text-white p-1"
+              className="lg:hidden text-white p-2 flex items-center justify-center"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
-              {isOpen ? <X size={20} /> : <span className="text-2xl leading-none select-none font-bold text-white">⋮</span>}
+              {isOpen ? <X size={24} /> : <span className="text-3xl leading-none select-none font-bold text-white">⋮</span>}
             </button>
           </div>
         </div>
