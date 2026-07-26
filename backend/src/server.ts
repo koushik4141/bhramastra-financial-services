@@ -55,6 +55,15 @@ const limiter = rateLimit({
 });
 app.use("/api/", limiter);
 
+// Root Endpoint (Welcome message)
+app.get("/", (req, res) => {
+  res.status(200).json({ 
+    message: "Welcome to the Brahmastra Trading Advisory API", 
+    docs: "Access endpoints via /api",
+    status: "online" 
+  });
+});
+
 // Health Check API
 app.get("/api/health", (req, res) => {
   res.status(200).json({ status: "healthy", timestamp: new Date() });
