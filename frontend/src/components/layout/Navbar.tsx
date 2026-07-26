@@ -36,15 +36,15 @@ export default function Navbar() {
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-20">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-2 group shrink-0">
             <div className="flex items-center justify-center">
-              <img src="/logo-new.jpeg" alt="Logo" className="h-8 md:h-12 w-auto object-contain rounded-md" />
+              <img src="/logo-new.jpeg" alt="Logo" className="h-6 md:h-12 w-auto object-contain rounded-md" />
             </div>
             <div className="flex flex-col">
-               <span className="font-heading text-xl md:text-3xl tracking-[0.1em] text-brand-saffron font-bold uppercase">
+               <span className="font-heading text-lg md:text-3xl tracking-[0.1em] text-brand-saffron font-bold uppercase">
                 BHRAMASTRA
               </span>
-              <span className="text-[9px] md:text-[11px] font-body tracking-[0.2em] font-light text-brand-grey uppercase -mt-1 text-center w-full block">
+              <span className="text-[7px] md:text-[11px] font-body tracking-[0.2em] font-light text-brand-grey uppercase -mt-1 text-center w-full block">
                 Financial Services
               </span>
             </div>
@@ -64,10 +64,10 @@ export default function Navbar() {
           </nav>
 
           {/* CTA + Mobile Toggle */}
-          <div className="flex items-center gap-1.5 md:gap-4">
+          <div className="flex items-center gap-2 md:gap-4 shrink-0">
             <Link
               href="/contact"
-              className="inline-flex btn-primary text-[7px] md:text-[11px] px-2 py-1 md:px-6 md:py-3 whitespace-nowrap"
+              className="inline-flex btn-primary !text-[9px] md:!text-[11px] !px-3 !py-1.5 md:!px-6 md:!py-3 whitespace-nowrap"
             >
               Book Consultation
             </Link>
@@ -76,7 +76,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
-              {isOpen ? <X size={20} /> : <span className="text-xl leading-none select-none font-bold text-white">⋮</span>}
+              {isOpen ? <X size={20} /> : <span className="text-2xl leading-none select-none font-bold text-white">⋮</span>}
             </button>
           </div>
         </div>
