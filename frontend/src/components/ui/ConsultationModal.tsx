@@ -133,7 +133,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
   const fieldClass = (field: keyof FormErrors) =>
     `w-full bg-white/5 border ${
       errors[field] ? "border-red-500/60" : "border-white/10"
-    } rounded-xl px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-brand-saffron/60 focus:bg-white/[0.08] transition-all`;
+    } rounded-xl px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-brand-primary/60 focus:bg-white/[0.08] transition-all`;
 
   const modal = (
     <AnimatePresence>
@@ -161,10 +161,10 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
           >
             {/* Header */}
             <div className="relative p-8 pb-6 border-b border-white/5">
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-saffron/5 via-transparent to-transparent rounded-t-3xl pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent rounded-t-3xl pointer-events-none" />
               <div className="relative flex items-start justify-between">
                 <div>
-                  <span className="text-brand-saffron text-[10px] font-heading tracking-[0.3em] uppercase block mb-2">
+                  <span className="text-brand-primary text-[10px] font-heading tracking-[0.3em] uppercase block mb-2">
                     Premium Advisory
                   </span>
                   <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">
@@ -229,7 +229,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
               <button
                 type="submit"
                 disabled={loading || submitted}
-                className="w-full inline-flex items-center justify-center gap-2.5 py-4 px-8 bg-brand-saffron text-[#050505] font-body font-bold text-sm uppercase tracking-wider rounded-xl hover:bg-brand-saffron/90 active:scale-[0.98] transition-all shadow-[0_0_30px_rgba(255,103,31,0.3)] hover:shadow-[0_0_40px_rgba(255,103,31,0.5)] disabled:opacity-60 disabled:cursor-not-allowed"
+                className="btn-primary w-full justify-center disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <><Loader2 size={16} className="animate-spin" /> Submitting...</>

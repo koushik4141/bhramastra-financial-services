@@ -40,12 +40,12 @@ export default function DashboardWidgets() {
       {widgets.map((widget) => {
         const Icon = widget.icon;
         return (
-          <div key={widget.title} className="bg-[#0A0F1A] border border-white/5 rounded-xl p-6">
+          <div key={widget.title} className="bg-background-secondary border border-white/5 rounded-xl p-6">
             <div className="flex justify-between items-start mb-4">
-              <div className="w-10 h-10 rounded-lg bg-brand-green/10 flex items-center justify-center">
-                <Icon size={20} className="text-brand-green" />
+              <div className="w-10 h-10 rounded-lg bg-brand-secondary/10 flex items-center justify-center">
+                <Icon size={20} className="text-brand-secondary" />
               </div>
-              <span className={`text-xs font-medium px-2 py-1 rounded bg-brand-green/10 text-brand-green`}>
+              <span className={`text-xs font-medium px-2 py-1 rounded bg-brand-secondary/10 text-brand-secondary`}>
                 {widget.change}
               </span>
             </div>

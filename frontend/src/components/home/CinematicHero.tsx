@@ -58,8 +58,8 @@ export default function CinematicHero() {
               variants={itemVariants}
               className="flex items-center gap-4 mb-8"
             >
-              <span className="w-12 h-[1px] bg-brand-saffron opacity-60" />
-              <span className="text-brand-saffron text-[11px] font-heading tracking-[0.3em] uppercase">
+              <span className="w-12 h-[1px] bg-brand-primary opacity-60" />
+              <span className="text-brand-primary text-xs font-heading tracking-[0.2em] font-semibold uppercase">
                 Premium Institutional Research
               </span>
             </motion.div>
@@ -67,10 +67,10 @@ export default function CinematicHero() {
             {/* Main Heading */}
             <motion.h1
               variants={itemVariants}
-              className="font-heading font-bold leading-[0.95] mb-6 tracking-[-1px] uppercase"
+              className="font-heading font-bold leading-[1.1] mb-6 tracking-tight uppercase"
             >
-              <span className="block text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] 2xl:text-[7rem] whitespace-nowrap">
-                <span className="text-brand-saffron">BHRAM</span>
+              <span className="block text-5xl md:text-6xl lg:text-7xl xl:text-[7.5rem] whitespace-nowrap">
+                <span className="text-brand-primary">BHRAM</span>
                 <span className="text-white">ASTRA</span>
               </span>
             </motion.h1>
@@ -78,12 +78,12 @@ export default function CinematicHero() {
             {/* Subheading */}
             <motion.h2
               variants={itemVariants}
-              className="font-heading font-bold text-2xl md:text-3xl lg:text-4xl tracking-wide uppercase mb-8"
+              className="font-heading font-semibold text-2xl md:text-3xl lg:text-4xl tracking-wide uppercase mb-8 leading-tight"
             >
               <span className="text-white">The Ultimate Weapon</span>
               <br />
               <span className="text-white">To Build </span>
-              <span className="text-brand-green">Wealth</span>
+              <span className="text-brand-secondary">Wealth</span>
             </motion.h2>
 
             {/* Paragraph */}
@@ -103,14 +103,14 @@ export default function CinematicHero() {
             >
               <a 
                 href="#consultation" 
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-saffron text-[#050505] font-body font-semibold text-sm uppercase tracking-wider rounded-button hover:bg-brand-saffron/90 transition-all shadow-[0_0_20px_rgba(255,153,51,0.3)] hover:shadow-[0_0_30px_rgba(255,153,51,0.5)]"
+                className="btn-primary py-4 text-sm"
               >
                 Book Consultation
                 <ArrowRight size={16} />
               </a>
               <a 
                 href="#services" 
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 text-white font-body font-semibold text-sm uppercase tracking-wider rounded-button hover:bg-white/10 transition-all border border-white/10"
+                className="btn-secondary py-4 text-sm"
               >
                 Explore Research
                 <ArrowRight size={16} />
@@ -160,14 +160,14 @@ export default function CinematicHero() {
           animate={{ opacity: 0.5 }}
           transition={{ delay: 1.5 }}
         >
-          <span className="text-[10px] font-body tracking-[0.2em] text-brand-grey uppercase">
+          <span className="text-xs font-body tracking-[0.2em] font-medium text-brand-grey uppercase">
             Scroll to explore
           </span>
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           >
-            <ChevronDown size={16} className="text-brand-saffron" />
+            <ChevronDown size={16} className="text-brand-primary" />
           </motion.div>
         </motion.div>
       </div>
