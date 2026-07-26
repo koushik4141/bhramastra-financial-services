@@ -38,13 +38,13 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="flex items-center justify-center">
-              <img src="/logo-new.jpeg" alt="Logo" className="h-12 w-auto object-contain rounded-md" />
+              <img src="/logo-new.jpeg" alt="Logo" className="h-8 md:h-12 w-auto object-contain rounded-md" />
             </div>
             <div className="flex flex-col">
-               <span className="font-heading text-3xl tracking-[0.1em] text-brand-saffron font-bold uppercase">
+               <span className="font-heading text-xl md:text-3xl tracking-[0.1em] text-brand-saffron font-bold uppercase">
                 BHRAMASTRA
               </span>
-              <span className="text-[10px] md:text-[11px] font-body tracking-[0.2em] font-light text-brand-grey uppercase -mt-1 text-center w-full block">
+              <span className="text-[9px] md:text-[11px] font-body tracking-[0.2em] font-light text-brand-grey uppercase -mt-1 text-center w-full block">
                 Financial Services
               </span>
             </div>
@@ -64,10 +64,10 @@ export default function Navbar() {
           </nav>
 
           {/* CTA + Mobile Toggle */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <Link
               href="/contact"
-              className="hidden md:inline-flex btn-primary text-[11px] px-6 py-3"
+              className="inline-flex btn-primary text-[9px] md:text-[11px] px-3 py-1.5 md:px-6 md:py-3"
             >
               Book Consultation
             </Link>
@@ -76,7 +76,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={22} /> : <span className="text-2xl leading-none select-none">⋮</span>}
             </button>
           </div>
         </div>

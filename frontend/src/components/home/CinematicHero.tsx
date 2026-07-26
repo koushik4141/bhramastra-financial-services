@@ -69,7 +69,7 @@ export default function CinematicHero() {
               variants={itemVariants}
               className="font-heading font-bold leading-[0.95] mb-6 tracking-[-1px] uppercase"
             >
-              <span className="block text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] 2xl:text-[7rem] whitespace-nowrap">
+              <span className="block text-[2.6rem] sm:text-5xl md:text-6xl lg:text-[5rem] xl:text-[6rem] 2xl:text-[7rem] whitespace-nowrap">
                 <span className="text-brand-saffron">BHRAM</span>
                 <span className="text-white">ASTRA</span>
               </span>
@@ -78,7 +78,7 @@ export default function CinematicHero() {
             {/* Subheading */}
             <motion.h2
               variants={itemVariants}
-              className="font-heading font-bold text-2xl md:text-3xl lg:text-4xl tracking-wide uppercase mb-8"
+              className="font-heading font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-wide uppercase mb-5 md:mb-8"
             >
               <span className="text-white">The Ultimate Weapon</span>
               <br />
@@ -89,7 +89,7 @@ export default function CinematicHero() {
             {/* Paragraph */}
             <motion.p
               variants={itemVariants}
-              className="text-brand-grey text-sm md:text-base leading-relaxed max-w-lg mb-10"
+              className="text-brand-grey text-xs sm:text-sm md:text-base leading-relaxed max-w-lg mb-8 md:mb-10"
             >
               Institutional-grade market research and advanced data-driven
               investment strategies engineered to help traders and investors make
